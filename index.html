@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Link Shortener</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1>Linkify</h1>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container">
+        <section class="shortener-section">
+          <h2>Shorten Your Long URLs</h2>
+          <div class="input-group">
+            <input
+              type="url"
+              id="longUrlInput"
+              placeholder="Paste your long URL here..."
+              required
+            />
+            <button id="shortenBtn">Shorten It!</button>
+          </div>
+          <div id="resultContainer" class="result-container hidden">
+            <p class="short-url-label">Your Shortened Link:</p>
+            <div class="short-url-display">
+              <a id="shortenedLink" href="#" target="_blank"></a>
+              <button id="copyBtn" class="copy-button">Copy</button>
+            </div>
+          </div>
+          <p id="errorMessage" class="error-message hidden"></p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Linkify.</p>
+      </div>
+    </footer>
+  </body>
+</html>
