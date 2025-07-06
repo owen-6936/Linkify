@@ -1,11 +1,15 @@
 import express from "express";
 import cors from "cors";
+import helment from "helmet";
+import { config } from "dotenv";
 import UrlRouter from "../routes/UrlRoutes.js";
+config();
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+if (process.env.NODE_ENV === "production") app.use(helment());
 
 app.get("/", (req, res) => {
   res.send("Linkify Backend API is configured and ready!");

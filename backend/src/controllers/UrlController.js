@@ -8,10 +8,12 @@ import {
 config();
 
 export const shortenUrl = async (req, res) => {
-  const { longUrl } = req.body;
+  let longUrl = req.body.longUrl;
   if (!longUrl) {
     return res.status(400).json({ message: "Please enter a URL to shorten." });
   }
+
+  if (longUrl.endsWith("/")) longUrl = longUrl.slice(0, -1);
 
   const hostname = process.env.HOSTNAME;
   if (!hostname) {
@@ -60,12 +62,13 @@ export const shortenUrl = async (req, res) => {
 };
 
 export const redirectToLongUrl = async (req, res) => {
-  const { shortCode } = req.params;
+  let shortCode = req.params.shortCode;
 
   if (!shortCode) {
     return res.status(400).json({ message: "Short code is missing." });
   }
 
+  if (shortCode.endsWith("/")) shortCode = shortCode.slice(0, -1);
   try {
     const urlEntry = await findLongUrlByShortCode(shortCode);
 

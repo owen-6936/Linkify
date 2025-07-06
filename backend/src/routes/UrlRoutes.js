@@ -1,10 +1,10 @@
 import { Router } from "express";
-import { shortenUrl } from "../controllers/UrlController.js";
+import { shortenUrl, redirectToLongUrl } from "../controllers/UrlController.js";
 
 const UrlRouter = Router();
 
 UrlRouter.post("/api/shorten", shortenUrl);
 
-UrlRouter.get("/:shortUrl", shortenUrl);
+UrlRouter.get("/:shortCode", redirectToLongUrl);
 
 export default UrlRouter;
