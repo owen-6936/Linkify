@@ -11,10 +11,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 if (process.env.NODE_ENV === "production") app.use(helment());
 
-app.get("/", (req, res) => {
-  res.send("Linkify Backend API is configured and ready!");
-});
-
 app.use((err, req, res, next) => {
   console.error("An unhandled error occurred in app.js:", err.stack);
   res.status(500).json({ message: "Internal Server Error" });

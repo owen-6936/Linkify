@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const copyBtn = document.getElementById("copyBtn");
   const errorMessage = document.getElementById("errorMessage");
 
+  // the api endpoint should be changed for production
   const API_ENDPOINT = "http://localhost:3000/api/shorten";
 
   shortenBtn.addEventListener("click", async () => {
