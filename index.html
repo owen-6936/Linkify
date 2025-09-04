@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linkify: Shorten URLs Easily | Free Custom Short Links</title>
+    <meta name="description" content="Transform long, unwieldy URLs into short, memorable links with Linkify. Fast, free, and easy-to-use URL shortening service for sharing online.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://lnkfy.cfd/"> <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lnkfy.cfd/">
+    <meta property="og:title" content="Linkify: Shorten URLs Easily">
+    <meta property="og:description" content="Transform long, unwieldy URLs into short, memorable links with Linkify. Fast, free, and easy-to-use URL shortening service for sharing online.">
+    <meta property="og:image" content="./images/favicon_io/linkify-share.png"> <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://lnkfy.cfd/">
+    <meta name="twitter:title" content="Linkify: Shorten URLs Easily">
+    <meta name="twitter:description" content="Transform long, unwieldy URLs into short, memorable links with Linkify. Fast, free, and easy-to-use URL shortening service.">
+    <meta name="twitter:image" content="./images/favicon_io/linkify-share.png"> <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="mask-icon" href="./images/favicon_io/safari-pinned-tab.svg" color="#2bb8ab">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="shortcut icon" href="./images/favicon_io/favicon.ico" type="image/x-icon">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../src/style.css" />
+    <script defer src="../src/script.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1>Linkify</h1>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container">
+        <section class="shortener-section">
+          <h2>Shorten Your Long URLs</h2>
+          <div class="input-group">
+            <input
+              type="url"
+              id="longUrlInput"
+              placeholder="Paste your long URL here..."
+              required
+            />
+            <button id="shortenBtn">Shorten It!</button>
+          </div>
+          <div id="resultContainer" class="result-container hidden">
+            <p class="short-url-label">Your Shortened Link:</p>
+            <div class="short-url-display">
+              <a id="shortenedLink" href="#" target="_blank"></a>
+              <button id="copyBtn" class="copy-button">Copy</button>
+            </div>
+          </div>
+          <p id="errorMessage" class="error-message hidden"></p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Linkify.</p>
+      </div>
+    </footer>
+  </body>
+</html>
