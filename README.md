@@ -67,7 +67,7 @@ The frontend needs to know where to send its API requests.
 - **For Local Development:** Your frontend JavaScript will be configured to make API calls directly to your local backend server. For example, in your `script.js` or a configuration file, ensure the API base URL is set to:
 
   ```javascript
-  const API_BASE_URL = "http://localhost:3000/api";
+  const API_BASE_URL = 'http://localhost:3000/api';
   ```
 
 - **For Production Deployment:** When deploying this application to a live production environment (e.g., `https://lnkfy.cfd`) behind a reverse proxy like Nginx, the frontend's API endpoint _must_ be updated to point to the live domain. Nginx will then proxy these requests to your backend.
@@ -75,7 +75,7 @@ The frontend needs to know where to send its API requests.
   **Action Required:** Before deploying to production, modify the API base URL in your frontend JavaScript (e.g., in `script.js`) to reflect your production domain:
 
   ```javascript
-  const API_BASE_URL = "https://lnkfy.cfd/api";
+  const API_BASE_URL = 'https://lnkfy.cfd/api';
   ```
 
   _(Adjust `API_BASE_URL` and the specific file/variable name to match your code structure.)_
