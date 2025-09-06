@@ -1,0 +1,28 @@
+{
+  "name": "linkify",
+  "version": "1.0.0",
+  "description": "Linkify is a modern, simple, and responsive URL shortening service. It allows users to transform long, cumbersome URLs into short, easy-to-share links. Built with a robust Node.js backend and a MySQL database, Linkify ensures efficient storage, retrieval, and redirection of links. Its intuitive frontend, crafted with vanilla JavaScript, HTML, and CSS, provides a seamless user experience for quickly generating and copying shortened URLs.",
+  "homepage": "https://github.com/owen-6936/Linkify#readme",
+  "bugs": {
+    "url": "https://github.com/owen-6936/Linkify/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/owen-6936/Linkify.git"
+  },
+  "license": "MIT",
+  "author": "Owen Erhabor",
+  "type": "module",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .js",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "eslint": "^9.35.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "prettier": "^3.6.2"
+  }
+}
